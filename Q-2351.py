@@ -1,9 +1,17 @@
-s = "abccbaacz"
+s = "leetcode"
+
+count_map = {}
+
+for i in s:
+  if i in count_map:
+    count_map[i]+=1
+  else:
+    count_map[i] = 1
+print(count_map)
 
 x = ""
-for i in range(0,len(s),1):
-  if s[i]==s[i+1]:
-    x = s[i]
+for key,value in count_map.items():
+  if value == 1:
+    x = key
     break
-
 print(x)
